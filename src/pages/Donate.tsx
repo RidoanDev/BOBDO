@@ -123,7 +123,7 @@ export default function Donate() {
                 asChild
               >
                 <a 
-                  href="https://docs.google.com/forms/d/1r6AHUr2biiREYTnF-Bqb0eK9YINEyPbAk52dqmMcLvc/edit?usp=drivesdk"
+                  href="https://forms.google.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
