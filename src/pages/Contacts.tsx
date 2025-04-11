@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, MessageSquare, Copy, Check } from 'lucide-react';
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  MessageSquare,
+  Copy,
+  Check,
+} from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import FormCard from '@/components/FormCard';
 import { Button } from '@/components/ui/button';
@@ -12,8 +20,8 @@ const Contacts = () => {
     navigator.clipboard.writeText(number.replace(/-/g, '')).then(() => {
       setCopiedNumber(number);
       toast({
-        title: "Number Copied",
-        description: "The number has been copied to your clipboard.",
+        title: 'Number Copied',
+        description: 'The number has been copied to your clipboard.',
       });
       setTimeout(() => setCopiedNumber(null), 2000);
     });
@@ -22,7 +30,7 @@ const Contacts = () => {
   // Function to get appropriate email link based on screen width
   const getEmailLink = () => {
     if (typeof window !== 'undefined') {
-      return window.innerWidth < 768 
+      return window.innerWidth < 768
         ? 'mailto:bobdo5800@gmail.com'
         : 'https://mail.google.com/mail/?view=cm&fs=1&to=bobdo5800@gmail.com';
     }
@@ -31,8 +39,8 @@ const Contacts = () => {
 
   return (
     <div>
-      <PageHeader 
-        title="Contact Us" 
+      <PageHeader
+        title="Contact Us"
         description="Have questions about blood donation or need assistance? We're here to help."
       />
 
@@ -41,9 +49,12 @@ const Contacts = () => {
           <div>
             <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
             <p className="text-gray-700 mb-8">
-              Our team is available to answer your questions about blood donation, organize blood drives, or provide information about our services. Please feel free to reach out to us through any of the following channels.
+              Our team is available to answer your questions about blood
+              donation, organize blood drives, or provide information about our
+              services. Please feel free to reach out to us through any of the
+              following channels.
             </p>
-            
+
             <div className="space-y-6">
               <div className="flex items-start">
                 <Phone className="h-5 w-5 text-blood-600 mr-4 mt-1" />
@@ -75,7 +86,9 @@ const Contacts = () => {
                     </Button>
                   </div>
                   <div className="flex items-center gap-2 mt-1">
-                    <p className="text-gray-700">Emergency Hotline: 01722-528164 (24/7)</p>
+                    <p className="text-gray-700">
+                      Emergency Hotline: 01722-528164 (24/7)
+                    </p>
                     <Button
                       variant="ghost"
                       size="icon"
@@ -101,14 +114,14 @@ const Contacts = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <Mail className="h-5 w-5 text-blood-600 mr-4 mt-1" />
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Email</h3>
                   <p className="text-gray-700">
-                    General Inquiries: {' '}
-                    <a 
+                    General Inquiries:{' '}
+                    <a
                       href={getEmailLink()}
                       className="text-blood-600 hover:text-blood-700"
                       target={window.innerWidth < 768 ? '_self' : '_blank'}
@@ -118,11 +131,13 @@ const Contacts = () => {
                     </a>
                   </p>
                   <p className="text-gray-700">
-                    Developer Support: {' '}
-                    <a 
-                      href={window.innerWidth < 768 
-                        ? 'mailto:ridoan.zisan@gmail.com'
-                        : 'https://mail.google.com/mail/?view=cm&fs=1&to=ridoan.zisan@gmail.com'}
+                    Developer Support:{' '}
+                    <a
+                      href={
+                        window.innerWidth < 768
+                          ? 'mailto:ridoan.zisan@gmail.com'
+                          : 'https://mail.google.com/mail/?view=cm&fs=1&to=ridoan.zisan@gmail.com'
+                      }
                       className="text-blood-600 hover:text-blood-700"
                       target={window.innerWidth < 768 ? '_self' : '_blank'}
                       rel="noopener noreferrer"
@@ -132,27 +147,29 @@ const Contacts = () => {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-blood-600 mr-4 mt-1" />
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Location</h3>
-                  <p className="text-gray-700">
-                   Bogura, Bangladesh
-                  </p>
+                  <p className="text-gray-700">Bogura, Bangladesh</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <Clock className="h-5 w-5 text-blood-600 mr-4 mt-1" />
                 <div>
-                  <h3 className="font-semibold text-lg mb-1">Operating Hours</h3>
-                  <p className="text-gray-700 mt-2">Emergency services available 24/7</p>
+                  <h3 className="font-semibold text-lg mb-1">
+                    Operating Hours
+                  </h3>
+                  <p className="text-gray-700 mt-2">
+                    Emergency services available 24/7
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div>
             <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
             <FormCard
@@ -166,50 +183,18 @@ const Contacts = () => {
         </div>
 
         <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 text-center">Our Blood Donation Centers</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center">
+            Our Blood Donation Centers
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow p-6">
               <h3 className="font-bold text-lg mb-3">Main Center</h3>
-              <p className="text-gray-600 mb-4">
-                123 Blood Donor Avenue<br />
-                Healthcare District<br />
-                City, Country, 12345
+              <p className="text-gray-600 mb-4">Shatmatha, Bogura</p>
+              <p className="text-gray-600">
+                <span className="font-semibold">Phone:</span> 01722-528164
               </p>
               <p className="text-gray-600">
-                <span className="font-semibold">Phone:</span> +123 456 7890
-              </p>
-              <p className="text-gray-600">
-                <span className="font-semibold">Hours:</span> Mon-Fri 8AM-6PM, Sat 9AM-3PM
-              </p>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow p-6">
-              <h3 className="font-bold text-lg mb-3">North Center</h3>
-              <p className="text-gray-600 mb-4">
-                456 Lifesaver Street<br />
-                North District<br />
-                City, Country, 12346
-              </p>
-              <p className="text-gray-600">
-                <span className="font-semibold">Phone:</span> +123 456 7892
-              </p>
-              <p className="text-gray-600">
-                <span className="font-semibold">Hours:</span> Mon-Fri 9AM-5PM, Sat 10AM-2PM
-              </p>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow p-6">
-              <h3 className="font-bold text-lg mb-3">South Center</h3>
-              <p className="text-gray-600 mb-4">
-                789 Donation Road<br />
-                South District<br />
-                City, Country, 12347
-              </p>
-              <p className="text-gray-600">
-                <span className="font-semibold">Phone:</span> +123 456 7893
-              </p>
-              <p className="text-gray-600">
-                <span className="font-semibold">Hours:</span> Mon-Fri 8:30AM-5:30PM, Sat 9AM-1PM
+                <span className="font-semibold">Hours:</span> 24/7
               </p>
             </div>
           </div>
