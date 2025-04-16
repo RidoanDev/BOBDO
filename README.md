@@ -50,7 +50,7 @@ I'm a passionate developer and student with expertise in web application develop
 #### 3. **Personal Portfolio**
 - **Description**: Bilingual portfolio website
 - **Tech Stack**: React, TypeScript, Tailwind CSS
-- **Live Demo**: [My Portfolio](https://ridoanmahmud.netlify.app)
+- **Live Demo**: [My Portfolio](https://ridoan-zisan.netlify.app)
 
 ---
 
