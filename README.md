@@ -69,7 +69,7 @@ I'm a passionate developer and student with expertise in web application develop
 - Academic English Grammar
 - Basics of Management
 - Web Development Fundamentals
-- [View All Certificates]([https://ridoan-zisan.netlify.app/#documents](https://drive.google.com/drive/folders/11Xh6R9aCnzLIIe56tVZlmEvzuaUKA3xj))
+- [View All Certificates]([https://drive.google.com/drive/folders/11Xh6R9aCnzLIIe56tVZlmEvzuaUKA3xj])
 
 ---
 
