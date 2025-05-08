@@ -74,6 +74,17 @@ const Home = () => {
                     <ArrowRight className="h-5 w-5" />
                   </Link>
                 </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-blood-600 text-blood-600 hover:bg-blood-50"
+                >
+                  <Link to="https://bobdo-certificate.netlify.app" className="flex items-center gap-2">
+                    সার্টিফিকেট নিন
+                    <ArrowRight className="h-5 w-5" />
+                  </Link>
+                </Button>
               </div>
             </div>
             <div className="md:w-1/2 flex justify-center">
