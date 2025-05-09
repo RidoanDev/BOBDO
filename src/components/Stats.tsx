@@ -29,7 +29,7 @@ const Stats = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <StatItem
             icon={<Droplet className="h-8 w-8" />}
-            value="১০,০০০+"
+            value="২৫,০০০+"
             label="রক্তদান"
           />
           <StatItem
@@ -44,7 +44,7 @@ const Stats = () => {
           />
           <StatItem
             icon={<Award className="h-8 w-8" />}
-            value="৫০০+"
+            value="১০০+"
             label="স্বেচ্ছাসেবক সদস্য"
           />
         </div>
