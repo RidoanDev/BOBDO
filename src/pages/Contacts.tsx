@@ -60,14 +60,14 @@ const Contacts = () => {
                 <div>
                   <h3 className="font-semibold text-lg mb-1">ফোন</h3>
                   <div className="flex items-center gap-2">
-                    <p className="text-gray-700">পরিচালক: 01722-528164</p>
+                    <p className="text-gray-700">পরিচালক: 01780-703075</p>
                     <Button
                       variant="ghost"
                       size="icon"
-                      onClick={() => handleCopyNumber('01722-528164')}
+                      onClick={() => handleCopyNumber('01780-703075')}
                       className="h-6 w-6"
                     >
-                      {copiedNumber === '01722-528164' ? (
+                      {copiedNumber === '01780-703075' ? (
                         <Check className="h-4 w-4 text-green-600" />
                       ) : (
                         <Copy className="h-4 w-4" />
@@ -121,7 +121,11 @@ const Contacts = () => {
                   <p className="text-gray-700">
                     সাধারণ জিজ্ঞাসা:{' '}
                     <a
-                      href={getEmailLink()}
+                      href={
+                        window.innerWidth < 768
+                          ? 'mailto:bobdo5800@gmail.com'
+                          : 'https://mail.google.com/mail/?view=cm&fs=1&to=bobdo5800@gmail.com'
+                      }
                       className="text-blood-600 hover:text-blood-700"
                       target={window.innerWidth < 768 ? '_self' : '_blank'}
                       rel="noopener noreferrer"
@@ -130,7 +134,7 @@ const Contacts = () => {
                     </a>
                   </p>
                   <p className="text-gray-700">
-                    ডেভেলপার সহায়তা:{' '}
+                     ডেভেলপমেন্ট সহায়তা:{' '}
                     <a
                       href={
                         window.innerWidth < 768
