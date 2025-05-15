@@ -80,7 +80,7 @@ const Home = () => {
                   variant="outline"
                   className="border-blood-600 text-blood-600 hover:bg-blood-50"
                 >
-                  <Link to="https://bobdo-certificate.netlify.app" className="flex items-center gap-2">
+                  <Link to="https://bobdo-certificate.vercel.app" className="flex items-center gap-2">
                     সার্টিফিকেট নিন
                     <ArrowRight className="h-5 w-5" />
                   </Link>
