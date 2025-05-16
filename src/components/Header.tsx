@@ -153,16 +153,16 @@ const Header = () => {
       </div>
 
       {/* Scroll to Top Button */}
-      {showScrollTop && (
-        <Button
-          variant="secondary"
-          size="icon"
-          className="fixed bottom-4 right-4 rounded-full shadow-lg bg-blood-600 text-white hover:bg-blood-700"
-          onClick={scrollToTop}
-        >
-          <ArrowUp className="h-5 w-5" />
-        </Button>
-      )}
+     {showScrollTop && (
+  <Button
+    variant="secondary"
+    size="icon"
+    className="fixed bottom-4 right-4 rounded-full shadow-lg bg-blood-600 text-white hover:bg-blood-700"
+    onClick={scrollToTop}
+  >
+    <ArrowUp className="h-5 w-5" />
+  </Button>
+)}
     </header>
   );
 };
