@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Heart, Users, BookOpen, Facebook } from 'lucide-react';
+import { ArrowRight, Heart, Users, BookOpen, Facebook, Droplet } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -66,15 +66,12 @@ const Home = () => {
                   className="bg-blood-600 hover:bg-blood-700"
                 >
                   <Link to="/donate-blood" className="flex items-center gap-2">
-                    <img 
-                      src="https://i.postimg.cc/kg1bW4p4/bobdo.png" 
-                      alt="BOBDO Logo" 
-                      className="h-5 w-5 object-contain"
-                    />
+                    <Droplet className="h-5 w-5" />
                     রক্ত দিন
                   </Link>
                 </Button>
-                
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 mt-4">
                 <Button
                   asChild
                   size="lg"
@@ -117,7 +114,7 @@ const Home = () => {
               <div className="relative">
                 <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-blood-100 animate-pulse-slow"></div>
                 <img 
-                  src="https://i.postimg.cc/kg1bW4p4/bobdo.png" 
+                  src="https://i.postimg.cc/pVmRddDC/bobdo-removebg-preview.png" 
                   alt="BOBDO Logo" 
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-32 w-32 md:h-40 md:w-40 object-contain"
                 />
@@ -157,7 +154,7 @@ const Home = () => {
             <Card className="shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <CardHeader className="text-center">
                 <Users className="h-12 w-12 mx-auto text-blood-600 mb-4" />
-                <CardTitle> স্বেচ্ছাসেবক হোন</CardTitle>
+                <CardTitle>স্বেচ্ছাসেবক হোন</CardTitle>
                 <CardDescription>
                   স্বেচ্ছাসেবক হিসেবে যোগদান করুন
                 </CardDescription>
@@ -173,11 +170,11 @@ const Home = () => {
               </CardContent>
             </Card>
 
-              <Card className="shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <Card className="shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
               <CardHeader className="text-center">
                 <Heart className="h-12 w-12 mx-auto text-blood-600 mb-4" />
-                <CardTitle> আর্থিক অনুদান</CardTitle>
-                <CardDescription> আর্থিকভাবে সহায়তা করুন</CardDescription>
+                <CardTitle>আর্থিক অনুদান</CardTitle>
+                <CardDescription>আর্থিকভাবে সহায়তা করুন</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
@@ -197,7 +194,6 @@ const Home = () => {
         <div className="container mx-auto px-4 text-center">
           <BookOpen className="h-16 w-16 mx-auto mb-6" />
           <h2 className="text-3xl font-bold mb-4">
-            {' '}
             প্রয়োজনীয় চিকিৎসা জ্ঞান
           </h2>
           <p className="text-xl max-w-3xl mx-auto mb-8">
@@ -205,7 +201,7 @@ const Home = () => {
             একজন সুপার হিরো হিসেবে কাজ করুন।
           </p>
           <Button asChild size="lg" variant="secondary">
-            <Link to="/medical-knowledge"> বিস্তারিত</Link>
+            <Link to="/medical-knowledge">বিস্তারিত</Link>
           </Button>
         </div>
       </section>
