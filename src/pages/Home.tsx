@@ -47,6 +47,22 @@ const Home = () => {
                 <Button
                   asChild
                   size="lg"
+                  variant="outline"
+                  className="border-blood-600 text-blood-600 hover:bg-blood-50"
+                >
+                  <a 
+                    href="https://www.facebook.com/bobdo.official" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    <Facebook className="h-5 w-5" />
+                    ফেসবুক পেজ
+                  </a>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
                   className="bg-blood-600 hover:bg-blood-700"
                 >
                   <Link to="/donate-blood" className="flex items-center gap-2">
