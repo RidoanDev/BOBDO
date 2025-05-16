@@ -62,20 +62,21 @@ const Home = () => {
                   </a>
                 </Button>
 
-                <Button
+               
+<Button
                   asChild
                   size="lg"
-                  className="bg-blood-600 hover:bg-blood-700 flex-1 min-w-[180px]"
+                  variant="outline"
+                  className="border-blood-600 text-blood-600 hover:bg-blood-50 flex-1 min-w-[180px]"
                 >
                   <Link 
                     to="/donate-blood" 
                     className="flex items-center gap-2 justify-center px-2"
                   >
-                    <Droplet className="h-4 w-4 md:h-5 md:w-5" />
                     <span className="whitespace-nowrap">রক্ত দিন</span>
+                    <ArrowRight className="h-4 w-4 md:h-5 md:w-5" />
                   </Link>
                 </Button>
-
                 <Button
                   asChild
                   size="lg"
