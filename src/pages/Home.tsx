@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Droplet, ArrowRight, Heart, Users, BookOpen } from 'lucide-react';
+import { Droplet, ArrowRight, Heart, Users, BookOpen, Facebook } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -31,6 +31,22 @@ const Home = () => {
                 <Button
                   asChild
                   size="lg"
+                  variant="outline"
+                  className="border-blood-600 text-blood-600 hover:bg-blood-50"
+                >
+                  <a 
+                    href="https://www.facebook.com/groups/BOBO.BD" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    <Facebook className="h-5 w-5" />
+                    ফেসবুক গ্রুপ
+                  </a>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
                   className="bg-blood-600 hover:bg-blood-700"
                 >
                   <Link to="/donate-blood" className="flex items-center gap-2">
@@ -38,6 +54,7 @@ const Home = () => {
                     রক্ত দিন
                   </Link>
                 </Button>
+                
                 <Button
                   asChild
                   size="lg"
