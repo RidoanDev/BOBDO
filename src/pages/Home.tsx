@@ -67,7 +67,7 @@ const Home = () => {
                 >
                   <Link to="/donate-blood" className="flex items-center gap-2">
                     <img 
-                      src="https://i.postimg.cc/kg1bW4p4/bobdo.png" 
+                      src="https://i.postimg.cc/pVmRddDC/bobdo-removebg-preview.png" 
                       alt="BOBDO Logo" 
                       className="h-5 w-5 object-contain"
                     />
@@ -117,7 +117,7 @@ const Home = () => {
               <div className="relative">
                 <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-blood-100 animate-pulse-slow"></div>
                 <img 
-                  src="https://i.postimg.cc/kg1bW4p4/bobdo.png" 
+                  src="https://i.postimg.cc/pVmRddDC/bobdo-removebg-preview.png" 
                   alt="BOBDO Logo" 
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-32 w-32 md:h-40 md:w-40 object-contain"
                 />
