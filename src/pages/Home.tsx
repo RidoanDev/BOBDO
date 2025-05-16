@@ -66,11 +66,7 @@ const Home = () => {
                   className="bg-blood-600 hover:bg-blood-700"
                 >
                   <Link to="/donate-blood" className="flex items-center gap-2">
-                    <img 
-                      src="https://i.postimg.cc/pVmRddDC/bobdo-removebg-preview.png" 
-                      alt="BOBDO Logo" 
-                      className="h-5 w-5 object-contain"
-                    />
+                    <Droplet className="h-5 w-5" />
                     রক্ত দিন
                   </Link>
                 </Button>
