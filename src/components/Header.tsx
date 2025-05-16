@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import {
   Menu,
   X,
-  Droplet,
   Code2,
   ArrowUp,
   Home,
@@ -83,7 +82,11 @@ const Header = () => {
           className="flex items-center space-x-2 transition-transform hover:scale-105"
           onClick={() => scrollToTop()}
         >
-          <Droplet className="h-8 w-8 text-blood-600" />
+          <img 
+            src="https://i.postimg.cc/pVmRddDC/bobdo-removebg-preview.png" 
+            alt="BOBDO Logo"
+            className="h-8 w-8 object-contain"
+          />
           <span className="text-2xl font-bold text-blood-600">BOBDO</span>
         </Link>
 
@@ -163,6 +166,7 @@ const Header = () => {
     </header>
   );
 };
+
 
 const NavLinks = () => {
   const location = useLocation();
