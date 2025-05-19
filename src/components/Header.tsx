@@ -68,101 +68,105 @@ const Header = () => {
   }, []);
 
   return (
-    <header
-      className={`sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm transition-all duration-300 ${
-        isScrolled ? 'shadow-md' : 'shadow-sm'
-      }`}
-    >
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <Link
-          to="/"
-          className="flex items-center space-x-2 transition-transform hover:scale-105 shrink-0"
-          onClick={() => scrollToTop()}
-        >
-          <img 
-            src="https://i.postimg.cc/pVmRddDC/bobdo-removebg-preview.png" 
-            alt="BOBDO Logo"
-            className="h-8 w-8 object-contain"
-          />
-          <span className="text-2xl font-bold text-blood-600">BOBDO</span>
-        </Link>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center">
-          <div className="flex items-center overflow-x-auto scrollbar-hide space-x-4">
-            <NavLinks />
-          </div>
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <a
-                  href="https://ridoan-zisan.netlify.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-700 hover:text-blood-600 transition-colors ml-4 shrink-0"
-                >
-                  <Code2 className="h-5 w-5" />
-                </a>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Developer Info</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        </nav>
-
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
-          <Button
-            ref={buttonRef}
-            variant="ghost"
-            size="icon"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="hover:bg-blood-50"
-          >
-            {isMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </Button>
-        </div>
-      </div>
-
-      {/* Mobile Navigation */}
-      <div
-        ref={menuRef}
-        className={`md:hidden bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300 ease-in-out overflow-hidden ${
-          isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+    <>
+      <header
+        className={`sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm transition-all duration-300 ${
+          isScrolled ? 'shadow-md' : 'shadow-sm'
         }`}
       >
-        <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-          <NavLinks />
-          <a
-            href="https://ridoan-zisan.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center space-x-2 text-gray-700 hover:text-blood-600 transition-colors py-2"
-            onClick={() => setIsMenuOpen(false)}
+        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+          <Link
+            to="/"
+            className="flex items-center space-x-2 transition-transform hover:scale-105 shrink-0"
+            onClick={() => scrollToTop()}
           >
-            <Code2 className="h-5 w-5" />
-            <span>Developer Info</span>
-          </a>
-        </div>
-      </div>
+            <img 
+              src="https://i.postimg.cc/pVmRddDC/bobdo-removebg-preview.png" 
+              alt="BOBDO Logo"
+              className="h-8 w-8 object-contain"
+            />
+            <span className="text-2xl font-bold text-blood-600">BOBDO</span>
+          </Link>
 
-      {/* Scroll to Top Button */}
-      {showScrollTop && (
-        <Button
-          variant="secondary"
-          size="icon"
-          className="fixed bottom-4 right-4 rounded-full shadow-lg bg-blood-600 text-white hover:bg-blood-700"
-          onClick={scrollToTop}
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center">
+            <div className="flex items-center overflow-x-auto scrollbar-hide space-x-4">
+              <NavLinks />
+            </div>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href="https://ridoan-zisan.netlify.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-700 hover:text-blood-600 transition-colors ml-4 shrink-0"
+                  >
+                    <Code2 className="h-5 w-5" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Developer Info</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <Button
+              ref={buttonRef}
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="hover:bg-blood-50"
+            >
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </Button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div
+          ref={menuRef}
+          className={`md:hidden bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300 ease-in-out overflow-hidden ${
+            isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+          }`}
         >
-          <ArrowUp className="h-5 w-5" />
-        </Button>
+          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+            <NavLinks />
+            <a
+              href="https://ridoan-zisan.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-gray-700 hover:text-blood-600 transition-colors py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Code2 className="h-5 w-5" />
+              <span>Developer Info</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      {/* Scroll to Top Button at the very bottom of the page */}
+      {showScrollTop && (
+        <div className="fixed bottom-0 left-0 w-full flex justify-center z-50 pb-4">
+          <Button
+            variant="secondary"
+            size="icon"
+            className="rounded-full shadow-lg bg-blood-600 text-white hover:bg-blood-700"
+            onClick={scrollToTop}
+          >
+            <ArrowUp className="h-5 w-5" />
+          </Button>
+        </div>
       )}
-    </header>
+    </>
   );
 };
 
