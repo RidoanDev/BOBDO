@@ -32,12 +32,10 @@ const Header = () => {
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
-  // Close mobile menu when route changes
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -48,7 +46,6 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Handle click outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
       if (
@@ -79,7 +76,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link
           to="/"
-          className="flex items-center space-x-2 transition-transform hover:scale-105"
+          className="flex items-center space-x-2 transition-transform hover:scale-105 shrink-0"
           onClick={() => scrollToTop()}
         >
           <img 
@@ -91,8 +88,10 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
-          <NavLinks />
+        <nav className="hidden md:flex items-center">
+          <div className="flex items-center overflow-x-auto scrollbar-hide space-x-4">
+            <NavLinks />
+          </div>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -100,7 +99,7 @@ const Header = () => {
                   href="https://ridoan-zisan.netlify.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-700 hover:text-blood-600 transition-colors"
+                  className="text-gray-700 hover:text-blood-600 transition-colors ml-4 shrink-0"
                 >
                   <Code2 className="h-5 w-5" />
                 </a>
@@ -153,20 +152,19 @@ const Header = () => {
       </div>
 
       {/* Scroll to Top Button */}
-     {showScrollTop && (
-  <Button
-    variant="secondary"
-    size="icon"
-    className="fixed bottom-4 right-4 rounded-full shadow-lg bg-blood-600 text-white hover:bg-blood-700"
-    onClick={scrollToTop}
-  >
-    <ArrowUp className="h-5 w-5" />
-  </Button>
-)}
+      {showScrollTop && (
+        <Button
+          variant="secondary"
+          size="icon"
+          className="fixed bottom-4 right-4 rounded-full shadow-lg bg-blood-600 text-white hover:bg-blood-700"
+          onClick={scrollToTop}
+        >
+          <ArrowUp className="h-5 w-5" />
+        </Button>
+      )}
     </header>
   );
 };
-
 
 const NavLinks = () => {
   const location = useLocation();
@@ -176,7 +174,8 @@ const NavLinks = () => {
   };
 
   const linkClass = (path: string) => `
-    relative flex items-center gap-2 text-gray-700 hover:text-blood-600 font-medium transition-colors py-2
+    relative flex items-center gap-1 text-gray-700 hover:text-blood-600 font-medium transition-colors py-1 px-2 text-sm
+    whitespace-nowrap
     ${
       isActive(path)
         ? 'text-blood-600 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blood-600'
