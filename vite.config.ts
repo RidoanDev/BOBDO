@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' && componentTagger(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['bobdo.png', 'apple-touch-icon.png', 'masked-icon.svg'],
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
         name: 'BOBDO - Bogura Online Blood Donation Organization',
         short_name: 'BOBDO',
@@ -24,19 +24,19 @@ export default defineConfig(({ mode }) => ({
         display: 'standalone',
         icons: [
           {
-            src: 'bobdo.png',
+            src: 'https://i.postimg.cc/D0V8yvZ2/bobdo.jpg',
             sizes: '192x192',
-            type: 'image/png'
+            type: 'image/jpeg'
           },
           {
-            src: 'bobdo.png',
+            src: 'https://i.postimg.cc/D0V8yvZ2/bobdo.jpg',
             sizes: '512x512',
-            type: 'image/png'
+            type: 'image/jpeg'
           },
           {
-            src: 'bobdo.png',
+            src: 'https://i.postimg.cc/D0V8yvZ2/bobdo.jpg',
             sizes: '512x512',
-            type: 'image/png',
+            type: 'image/jpeg',
             purpose: 'any maskable'
           }
         ]
